@@ -3,31 +3,31 @@ let makeResume = ./dhallResume.dhall
 let resume = makeResume.helpers
 
 let socials =
-      { github = resume.socialHelpers.github::{ userName = "s-zeng" }
-      , linkedin = resume.socialHelpers.linkedin::{ userName = "s-zeng1" }
+      { github = resume.socialHelpers.github::{ userName = "A-R-Graham" }
+      , linkedin = resume.socialHelpers.linkedin::{ userName = "A-R-Graham" }
       }
 
 let info =
       resume.PersonalInfo::{
-      , name = "Simon Zeng"
-      , title = "Software Engineer"
-      , email = "contact@simonzeng.com"
-      , phone = "1 (613) 983-9079"
-      , site = "simonzeng.com"
+      , name = "Alex Graham"
+      , title = "Account Manager"
+      , email = "alex.ralph.graham@gmail.com"
+      , phone = "+61 423 344 568"
+      , site = "alexgraham.com"
       , socials = toMap socials
       }
 
 let workExperience =
-      { `TQ Tezos` = resume.Job::{
-        , company = "TQ Tezos"
-        , title = resume.sweIntern "Blockchain"
-        , location = "New York, New York"
+      { `SUEZ Water Technologies & Solutions` = resume.Job::{
+        , company = "SUEZ"
+        , title = resume.sweIntern "Digital Services Representative & Part Time Account Manager"
+        , location = "Altona, Melbourne"
         , dates =
-          { start = { year = 2020, month = resume.Month.September }
+          { start = { year = 2022, month = resume.Month.January }
           , end =
-              resume.EndDate.Date { year = 2020, month = resume.Month.December }
+              resume.EndDate.Date { year = 2022, month = resume.Month.Ongoing }
           }
-        , skills = [ "Blockchain", "Haskell" ]
+        , skills = [ "Excel", "InSight", " ]
         , bulletPoints =
           [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
           , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
@@ -316,12 +316,12 @@ let coursework
 let education
     : List resume.Education.Type
     = [ resume.Education::{
-        , school = "University of Waterloo"
-        , degree = "Bachelor's degree"
-        , major = "Computer Science"
+        , school = "RMIT University"
+        , degree = "Bachelor's degree (Honours)"
+        , major = "Chemical Engineering"
         , gradDate = resume.ResumeDate::{
-          , month = resume.Month.May
-          , year = 2022
+          , month = resume.Month.November
+          , year = 2018
           }
         }
       ]
