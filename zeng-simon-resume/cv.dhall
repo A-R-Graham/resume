@@ -3,8 +3,8 @@ let makeResume = ./dhallResume.dhall
 let resume = makeResume.helpers
 
 let socials =
-      { github = resume.socialHelpers.github::{ userName = "A-R-Graham" }
-      , linkedin = resume.socialHelpers.linkedin::{ userName = "A-R-Graham" }
+      { github = resume.socialHelpers.github::{ userName = "a-graham1" }
+      , linkedin = resume.socialHelpers.linkedin::{ userName = "a-graham1" }
       }
 
 let info =
